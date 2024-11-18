@@ -15,7 +15,5 @@ jobs:
       - name: Delete source code ZIP and tar.gz
         uses: mknejp/delete-release-assets@v1
         with:
-          repo-token: ${{ secrets.GH_TOKEN }}
-          asset-name: |
-            source code.zip
-            source code.tar.gz
+          token: ${{ secrets.GH_TOKEN }}
+          assets: '*.zip'
